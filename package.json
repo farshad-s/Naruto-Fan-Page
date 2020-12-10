@@ -1,0 +1,24 @@
+{
+  "name": "naruto-fan-page",
+  "version": "1.0.0",
+  "description": "A fan page on the number 1 Manga and Anime, Naruto!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/farshad-s/naruto-fan-page.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/farshad-s/naruto-fan-page/issues"
+  },
+  "homepage": "https://github.com/farshad-s/naruto-fan-page#readme",
+  "dependencies": {
+    "bootstrap": "^4.5.3",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1"
+  }
+}
