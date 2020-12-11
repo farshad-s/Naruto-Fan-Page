@@ -1,3 +1,13 @@
-.hello {
-  color: blue;
+html,
+body,
+header,
+.view {
+  height: 100%;
+}
+
+.naruto-background {
+  background-image: url(img/naruto-img.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
