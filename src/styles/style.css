@@ -12,7 +12,13 @@ header,
   background-position: center center;
 }
 
-.header {
+.index-header {
   color: #ff7b00;
+}
+
+@media only screen and (max-width: 600px) {
+  .index-header {
+    display: none;
+  }
 }
 /*# sourceMappingURL=style.css.map */
