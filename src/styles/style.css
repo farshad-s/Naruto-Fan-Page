@@ -1,8 +1,13 @@
+/* global */
 html,
 body,
 header,
 .view {
   height: 100%;
+}
+
+.navbar {
+  background-color: black;
 }
 
 .naruto-background {
@@ -12,11 +17,8 @@ header,
   background-position: center center;
 }
 
+/* index page */
 .index-header {
   color: #ff7b00;
-}
-
-.navbar {
-  background-color: black;
 }
 /*# sourceMappingURL=style.css.map */
