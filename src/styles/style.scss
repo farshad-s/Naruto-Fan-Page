@@ -16,8 +16,6 @@ header,
   color: #ff7b00;
 }
 
-@media only screen and (max-width: 600px) {
-  .index-header {
-    display: none;
-  }
+.navbar {
+  background-color: black;
 }
