@@ -9,6 +9,7 @@ const answerThree = document.getElementById("answer-three");
 const answerFour = document.getElementById("answer-four");
 
 startButton.addEventListener("click", startQuiz);
+nextButton.addEventListener("click", nextQuestion);
 
 const quizArray = [
   {
@@ -26,7 +27,7 @@ const quizArray = [
     answer4: "Apples",
   },
   {
-    question: "What power do the Uchiha clan possess",
+    question: "What power do the Uchiha clan possess?",
     answer1: "The Renegan",
     answer2: "The Sharingan",
     answer3: "The Byakugan",
@@ -55,4 +56,8 @@ function pickRandomQuestion() {
   answerTwo.innerText = quizArray[randomNumber].answer2;
   answerThree.innerText = quizArray[randomNumber].answer3;
   answerFour.innerText = quizArray[randomNumber].answer4;
+}
+
+function nextQuestion() {
+  pickRandomQuestion();
 }
