@@ -45,15 +45,14 @@ function startQuiz() {
   startButton.classList.add("hide");
   showQuestions.classList.remove("hide");
   nextButton.classList.remove("hide");
-  questionText.innerText = quizArray[0].question;
-  answerOne.innerText = quizArray[0].answer1;
-  answerTwo.innerText = quizArray[0].answer2;
-  answerThree.innerText = quizArray[0].answer3;
-  answerFour.innerText = quizArray[0].answer4;
+  pickRandomQuestion();
 }
 
 function pickRandomQuestion() {
-  Math.floor(Math.random() * quizArray.length);
+  let randomNumber = Math.floor(Math.random() * quizArray.length);
+  questionText.innerText = quizArray[randomNumber].question;
+  answerOne.innerText = quizArray[randomNumber].answer1;
+  answerTwo.innerText = quizArray[randomNumber].answer2;
+  answerThree.innerText = quizArray[randomNumber].answer3;
+  answerFour.innerText = quizArray[randomNumber].answer4;
 }
-
-pickRandomQuestion();
