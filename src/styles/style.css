@@ -21,4 +21,9 @@ header,
 .index-header {
   color: #ff7b00;
 }
+
+/* trivia page */
+.hover:hover {
+  cursor: pointer;
+}
 /*# sourceMappingURL=style.css.map */
