@@ -53,52 +53,54 @@
           <div class="row">
             <div class="col-sm-6 text-center text-sm-left mt-sm-5">
               <h1 class="header index-header">The #1 Anime and Manga!</h1>
-              <div class="card" style="width: 18rem">
-                <div class="card-body text-sm-left hide">
-                  <h5 class="card-title hide">Question</h5>
-                  <p class="card-text hide"></p>
+              <div class="card hide" id="quiz-container" style="width: 18rem">
+                <div class="card-body text-sm-left">
+                  <h5 class="card-title">Question</h5>
+                  <p class="card-text"></p>
                 </div>
                 <ul class="list-group list-group-flush">
                   <button
                     type="button"
-                    class="btn btn-light btn-outline-dark btn-block hide"
+                    class="btn btn-light btn-outline-dark btn-block"
                   >
                     Answer 1
                   </button>
                   <button
                     type="button"
-                    class="btn btn-light btn-outline-dark btn-block hide"
+                    class="btn btn-light btn-outline-dark btn-block"
                   >
                     Answer 2
                   </button>
                   <button
                     type="button"
-                    class="btn btn-light btn-outline-dark btn-block hide"
+                    class="btn btn-light btn-outline-dark btn-block"
                   >
                     Answer 3
                   </button>
                   <button
                     type="button"
-                    class="btn btn-light btn-outline-dark btn-block hide"
+                    class="btn btn-light btn-outline-dark btn-block"
                   >
                     Answer 4
                   </button>
-                  <button
-                    type="button"
-                    class="btn btn-light btn-outline-dark btn-start"
-                    id="start-button"
-                  >
-                    Start Quiz
-                  </button>
-                  <button
-                    type="button"
-                    class="btn btn-light btn-outline-dark btn-next hide"
-                    id="next-button"
-                  >
-                    Next Question
-                  </button>
+                </div>
+                <div class="card" style="width: 18rem">
+                <button
+                type="button"
+                class="btn btn-light btn-outline-dark btn-start"
+                id="start-button"
+              >
+                Start Quiz
+              </button>
+              <button
+                type="button"
+                class="btn btn-light btn-outline-dark btn-block btn-next hide"
+                id="next-button"
+              >
+                Next Question
+              </button>
                 </ul>
-              </div>
+            </div>
             </div>
           </div>
         </div>
