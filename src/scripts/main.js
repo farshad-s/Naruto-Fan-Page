@@ -14,31 +14,39 @@ nextButton.addEventListener("click", nextQuestion);
 const quizArray = [
   {
     question: "What is the name of the main character?",
-    answer1: "Sasuke Uchiha",
-    answer2: "The 3rd Hokage",
-    answer3: "Naruto Uzumaki",
-    answer4: "Kakashi Sensei",
+    answers: [
+      { text: "Sasuke Uchiha" },
+      { text: "The 3rd Hokage" },
+      { text: "Naruto Uzumaki", status: true },
+      { text: "Kakashi Sensei" },
+    ],
   },
   {
     question: "What is Naruto Uzumakis favourite food?",
-    answer1: "Ramen",
-    answer2: "Steak",
-    answer3: "He doesn't like food",
-    answer4: "Apples",
+    answers: [
+      { text: "Ramen", status: true },
+      { text: "Steak" },
+      { text: "He doesn't like food" },
+      { text: "Apples" },
+    ],
   },
   {
     question: "What power do the Uchiha clan possess?",
-    answer1: "The Renegan",
-    answer2: "The Sharingan",
-    answer3: "The Byakugan",
-    answer4: "The Nine Tails Chakra",
+    answers: [
+      { text: "The Renegan" },
+      { text: "The Sharingan", status: true },
+      { text: "The Byakugan" },
+      { text: "The Nine Tails Chakra" },
+    ],
   },
   {
     question: "Which tailed beast does the Raikages brother control?",
-    answer1: "The three tails",
-    answer2: "The nine tails",
-    answer3: "The eight tails",
-    answer4: "The five tails",
+    answers: [
+      { text: "The three tails" },
+      { text: "The nine tails" },
+      { text: "The eight tails", status: true },
+      { text: "The five tails" },
+    ],
   },
 ];
 
@@ -52,10 +60,10 @@ function startQuiz() {
 function pickRandomQuestion() {
   let randomNumber = Math.floor(Math.random() * quizArray.length);
   questionText.innerText = quizArray[randomNumber].question;
-  answerOne.innerText = quizArray[randomNumber].answer1;
-  answerTwo.innerText = quizArray[randomNumber].answer2;
-  answerThree.innerText = quizArray[randomNumber].answer3;
-  answerFour.innerText = quizArray[randomNumber].answer4;
+  answerOne.innerText = quizArray[randomNumber].answers[0].text;
+  answerTwo.innerText = quizArray[randomNumber].answers[1].text;
+  answerThree.innerText = quizArray[randomNumber].answers[2].text;
+  answerFour.innerText = quizArray[randomNumber].answers[3].text;
 }
 
 function nextQuestion() {
