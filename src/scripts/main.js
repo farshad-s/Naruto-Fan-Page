@@ -113,6 +113,15 @@ function changeQuestion() {
     showQuestions.classList.add("hide");
     nextButton.classList.add("hide");
     quizOver.classList.remove("hide");
+    displayResult();
+  }
+}
+
+function displayResult() {
+  if (scoreCount.innerText >= 3) {
+    quizOver.innerText = "Mission Complete!";
+  } else {
+    quizOver.innerText = "Mission Failed";
   }
 }
 
