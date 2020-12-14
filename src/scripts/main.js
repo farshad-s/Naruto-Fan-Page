@@ -68,13 +68,8 @@ function nextQuestion() {
   changeQuestion();
   choosingAnswer();
   count++;
-
-  answerOne.classList.add("btn-light");
-  answerTwo.classList.add("btn-light");
-  answerThree.classList.add("btn-light");
-  answerFour.classList.add("btn-light");
-
   enableAnswers();
+  resetButtonColour();
 }
 
 function enableAnswers() {
@@ -89,6 +84,13 @@ function disableAnswers() {
   answerTwo.disabled = true;
   answerThree.disabled = true;
   answerFour.disabled = true;
+}
+
+function resetButtonColour() {
+  answerOne.style.backgroundColor = "initial";
+  answerTwo.style.backgroundColor = "initial";
+  answerThree.style.backgroundColor = "initial";
+  answerFour.style.backgroundColor = "initial";
 }
 
 function changeQuestion() {
@@ -109,15 +111,12 @@ function changeQuestion() {
 function choosingAnswer() {
   if (quizArray[count].answers[0].status !== true) {
     answerOne.onclick = function () {
-      this.classList.remove("btn-light");
-      this.classList.add("btn-danger");
+      answerOne.style.backgroundColor = "red";
       disableAnswers();
     };
   } else {
     answerOne.onclick = function () {
-      this.classList.remove("btn-light");
-      this.classList.remove("btn-danger");
-      this.classList.add("btn-success");
+      answerOne.style.backgroundColor = "green";
       disableAnswers();
     };
   }
