@@ -48,6 +48,24 @@ const quizArray = [
       { text: "The five tails" },
     ],
   },
+  {
+    question: "How many Kages are there?",
+    answers: [
+      { text: "3" },
+      { text: "10" },
+      { text: "5", status: true },
+      { text: "2" },
+    ],
+  },
+  {
+    question: "Who has the one-tailed beast inside him?",
+    answers: [
+      { text: "Naruto" },
+      { text: "Gaara", status: true },
+      { text: "Sakura" },
+      { text: "Orochimaru" },
+    ],
+  },
 ];
 
 // Start button - When button is clicked, startQuiz runs
