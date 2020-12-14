@@ -95,10 +95,10 @@ function disableAnswers() {
 
 // Resets button background colour to initial
 function resetButtonColour() {
-  answerOne.style.backgroundColor = "initial";
-  answerTwo.style.backgroundColor = "initial";
-  answerThree.style.backgroundColor = "initial";
-  answerFour.style.backgroundColor = "initial";
+  answerOne.style.backgroundColor = "white";
+  answerTwo.style.backgroundColor = "white";
+  answerThree.style.backgroundColor = "white";
+  answerFour.style.backgroundColor = "white";
 }
 
 function changeQuestion() {
