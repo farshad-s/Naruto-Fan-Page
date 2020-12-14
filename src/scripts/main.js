@@ -10,9 +10,6 @@ const answerTwo = document.getElementById("answer-two");
 const answerThree = document.getElementById("answer-three");
 const answerFour = document.getElementById("answer-four");
 
-startButton.addEventListener("click", startQuiz);
-nextButton.addEventListener("click", nextQuestion);
-
 // Array that holds the quiz questions
 const quizArray = [
   {
@@ -53,6 +50,11 @@ const quizArray = [
   },
 ];
 
+// Start button - When button is clicked, startQuiz runs
+// Next Button - When button is clicked, nextQuestion runs
+startButton.addEventListener("click", startQuiz);
+nextButton.addEventListener("click", nextQuestion);
+
 // Removes start button, shows questions, shows next button
 function startQuiz() {
   startButton.classList.add("hide");
@@ -66,6 +68,7 @@ function startQuiz() {
 let count = 0;
 scoreCount.innerText = 0;
 
+// Changes question, gives colour + disable to button, adds to scoreCount if answer is correct, enables clicking on the buttons, resets the colour of the buttons
 function nextQuestion() {
   changeQuestion();
   choosingAnswer();
