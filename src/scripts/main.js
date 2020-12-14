@@ -112,4 +112,61 @@ function choosingAnswer() {
       answerFour.disabled = true;
     };
   }
+
+  if (quizArray[count].answers[1].status !== true) {
+    answerTwo.onclick = function () {
+      this.classList.remove("btn-light");
+      this.classList.add("btn-danger");
+      answerOne.disabled = true;
+      answerThree.disabled = true;
+      answerFour.disabled = true;
+    };
+  } else {
+    answerTwo.onclick = function () {
+      this.classList.remove("btn-light");
+      this.classList.remove("btn-danger");
+      this.classList.add("btn-success");
+      answerOne.disabled = true;
+      answerThree.disabled = true;
+      answerFour.disabled = true;
+    };
+  }
+
+  if (quizArray[count].answers[2].status !== true) {
+    answerThree.onclick = function () {
+      this.classList.remove("btn-light");
+      this.classList.add("btn-danger");
+      answerOne.disabled = true;
+      answerTwo.disabled = true;
+      answerFour.disabled = true;
+    };
+  } else {
+    answerThree.onclick = function () {
+      this.classList.remove("btn-light");
+      this.classList.remove("btn-danger");
+      this.classList.add("btn-success");
+      answerOne.disabled = true;
+      answerTwo.disabled = true;
+      answerFour.disabled = true;
+    };
+  }
+
+  if (quizArray[count].answers[3].status !== true) {
+    answerFour.onclick = function () {
+      this.classList.remove("btn-light");
+      this.classList.add("btn-danger");
+      answerOne.disabled = true;
+      answerTwo.disabled = true;
+      answerThree.disabled = true;
+    };
+  } else {
+    answerFour.onclick = function () {
+      this.classList.remove("btn-light");
+      this.classList.remove("btn-danger");
+      this.classList.add("btn-success");
+      answerOne.disabled = true;
+      answerTwo.disabled = true;
+      answerThree.disabled = true;
+    };
+  }
 }
