@@ -123,45 +123,36 @@ function choosingAnswer() {
 
   if (quizArray[count].answers[1].status !== true) {
     answerTwo.onclick = function () {
-      this.classList.remove("btn-light");
-      this.classList.add("btn-danger");
+      answerTwo.style.backgroundColor = "red";
       disableAnswers();
     };
   } else {
     answerTwo.onclick = function () {
-      this.classList.remove("btn-light");
-      this.classList.remove("btn-danger");
-      this.classList.add("btn-success");
+      answerTwo.style.backgroundColor = "green";
       disableAnswers();
     };
   }
 
   if (quizArray[count].answers[2].status !== true) {
     answerThree.onclick = function () {
-      this.classList.remove("btn-light");
-      this.classList.add("btn-danger");
+      answerThree.style.backgroundColor = "red";
       disableAnswers();
     };
   } else {
     answerThree.onclick = function () {
-      this.classList.remove("btn-light");
-      this.classList.remove("btn-danger");
-      this.classList.add("btn-success");
+      answerThree.style.backgroundColor = "green";
       disableAnswers();
     };
   }
 
   if (quizArray[count].answers[3].status !== true) {
     answerFour.onclick = function () {
-      this.classList.remove("btn-light");
-      this.classList.add("btn-danger");
+      answerFour.style.backgroundColor = "red";
       disableAnswers();
     };
   } else {
     answerFour.onclick = function () {
-      this.classList.remove("btn-light");
-      this.classList.remove("btn-danger");
-      this.classList.add("btn-success");
+      answerFour.style.backgroundColor = "green";
       disableAnswers();
     };
   }
