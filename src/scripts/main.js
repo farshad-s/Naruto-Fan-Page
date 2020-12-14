@@ -15,6 +15,7 @@ const answerButtons = document.getElementsByClassName("answer-button");
 startButton.addEventListener("click", startQuiz);
 nextButton.addEventListener("click", nextQuestion);
 
+// Array that holds the quiz questions
 const quizArray = [
   {
     question: "What is the name of the main character?",
@@ -54,6 +55,7 @@ const quizArray = [
   },
 ];
 
+// Removes start button, shows questions, shows next button
 function startQuiz() {
   startButton.classList.add("hide");
   showQuestions.classList.remove("hide");
@@ -61,6 +63,8 @@ function startQuiz() {
   nextQuestion();
 }
 
+// count - to loop through the quiz array
+// scoreCount - to increase the score when right answer is selected
 let count = 0;
 scoreCount.innerText = 0;
 
@@ -72,6 +76,7 @@ function nextQuestion() {
   resetButtonColour();
 }
 
+// Makes the answer buttons clickable
 function enableAnswers() {
   answerOne.disabled = false;
   answerTwo.disabled = false;
@@ -79,6 +84,7 @@ function enableAnswers() {
   answerFour.disabled = false;
 }
 
+// Removes option to click the answer buttons
 function disableAnswers() {
   answerOne.disabled = true;
   answerTwo.disabled = true;
@@ -86,6 +92,7 @@ function disableAnswers() {
   answerFour.disabled = true;
 }
 
+// Resets button background colour to initial
 function resetButtonColour() {
   answerOne.style.backgroundColor = "initial";
   answerTwo.style.backgroundColor = "initial";
