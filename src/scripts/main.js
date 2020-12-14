@@ -8,6 +8,8 @@ const answerTwo = document.getElementById("answer-two");
 const answerThree = document.getElementById("answer-three");
 const answerFour = document.getElementById("answer-four");
 
+const answerButtons = document.getElementsByClassName("answer-button");
+
 startButton.addEventListener("click", startQuiz);
 nextButton.addEventListener("click", nextQuestion);
 
@@ -68,4 +70,13 @@ function pickRandomQuestion() {
 
 function nextQuestion() {
   pickRandomQuestion();
+  answerOne.classList.add("btn-light");
+  answerTwo.classList.add("btn-light");
+  answerThree.classList.add("btn-light");
+  answerFour.classList.add("btn-light");
+
+  answerOne.disabled = false;
+  answerTwo.disabled = false;
+  answerThree.disabled = false;
+  answerFour.disabled = false;
 }
