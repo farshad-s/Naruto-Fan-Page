@@ -10,8 +10,6 @@ const answerTwo = document.getElementById("answer-two");
 const answerThree = document.getElementById("answer-three");
 const answerFour = document.getElementById("answer-four");
 
-const answerButtons = document.getElementsByClassName("answer-button");
-
 startButton.addEventListener("click", startQuiz);
 nextButton.addEventListener("click", nextQuestion);
 
