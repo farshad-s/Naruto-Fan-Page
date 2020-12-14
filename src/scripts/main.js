@@ -2,6 +2,7 @@ const startButton = document.getElementById("start-button");
 const showQuestions = document.getElementById("quiz-container");
 const nextButton = document.getElementById("next-button");
 const questionText = document.getElementById("question-text");
+const quizOver = document.getElementById("quiz-over");
 
 const answerOne = document.getElementById("answer-one");
 const answerTwo = document.getElementById("answer-two");
@@ -82,5 +83,10 @@ function changeQuestion() {
     answerThree.innerText = quizArray[count].answers[2].text;
     answerFour.innerText = quizArray[count].answers[3].text;
     count++;
+  } else {
+    startButton.classList.add("hide");
+    showQuestions.classList.add("hide");
+    nextButton.classList.add("hide");
+    quizOver.classList.remove("hide");
   }
 }
