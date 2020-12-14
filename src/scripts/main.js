@@ -32,60 +32,35 @@ const quizArray = [
       { text: "Apples" },
     ],
   },
-  // {
-  //   question: "What power do the Uchiha clan possess?",
-  //   answers: [
-  //     { text: "The Renegan" },
-  //     { text: "The Sharingan", status: true },
-  //     { text: "The Byakugan" },
-  //     { text: "The Nine Tails Chakra" },
-  //   ],
-  // },
-  // {
-  //   question: "Which tailed beast does the Raikages brother control?",
-  //   answers: [
-  //     { text: "The three tails" },
-  //     { text: "The nine tails" },
-  //     { text: "The eight tails", status: true },
-  //     { text: "The five tails" },
-  //   ],
-  // },
+  {
+    question: "What power do the Uchiha clan possess?",
+    answers: [
+      { text: "The Renegan" },
+      { text: "The Sharingan", status: true },
+      { text: "The Byakugan" },
+      { text: "The Nine Tails Chakra" },
+    ],
+  },
+  {
+    question: "Which tailed beast does the Raikages brother control?",
+    answers: [
+      { text: "The three tails" },
+      { text: "The nine tails" },
+      { text: "The eight tails", status: true },
+      { text: "The five tails" },
+    ],
+  },
 ];
 
 function startQuiz() {
   startButton.classList.add("hide");
   showQuestions.classList.remove("hide");
   nextButton.classList.remove("hide");
-  pickRandomQuestion();
-  choosingAnswer();
-}
-
-let randomNumber = Math.floor(Math.random() * quizArray.length);
-
-function pickRandomQuestion() {
-  questionText.innerText = quizArray[randomNumber].question;
-  answerOne.innerText = quizArray[randomNumber].answers[0].text;
-  answerTwo.innerText = quizArray[randomNumber].answers[1].text;
-  answerThree.innerText = quizArray[randomNumber].answers[2].text;
-  answerFour.innerText = quizArray[randomNumber].answers[3].text;
-}
-
-function choosingAnswer() {
-  if (quizArray[randomNumber].answers[0].status !== true) {
-    answerOne.onclick = function () {
-      this.classList.remove("btn-light");
-      this.classList.add("btn-danger");
-    };
-  } else {
-    answerOne.onclick = function () {
-      this.classList.remove("btn-light");
-      this.classList.add("btn-success");
-    };
-  }
+  nextQuestion();
 }
 
 function nextQuestion() {
-  pickRandomQuestion();
+  changeQuestion();
   answerOne.classList.add("btn-light");
   answerTwo.classList.add("btn-light");
   answerThree.classList.add("btn-light");
@@ -95,4 +70,17 @@ function nextQuestion() {
   answerTwo.disabled = false;
   answerThree.disabled = false;
   answerFour.disabled = false;
+}
+
+let count = 0;
+
+function changeQuestion() {
+  if (count < quizArray.length) {
+    questionText.innerText = quizArray[count].question;
+    answerOne.innerText = quizArray[count].answers[0].text;
+    answerTwo.innerText = quizArray[count].answers[1].text;
+    answerThree.innerText = quizArray[count].answers[2].text;
+    answerFour.innerText = quizArray[count].answers[3].text;
+    count++;
+  }
 }
