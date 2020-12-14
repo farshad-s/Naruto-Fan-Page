@@ -74,10 +74,21 @@ function nextQuestion() {
   answerThree.classList.add("btn-light");
   answerFour.classList.add("btn-light");
 
+  enableAnswers();
+}
+
+function enableAnswers() {
   answerOne.disabled = false;
   answerTwo.disabled = false;
   answerThree.disabled = false;
   answerFour.disabled = false;
+}
+
+function disableAnswers() {
+  answerOne.disabled = true;
+  answerTwo.disabled = true;
+  answerThree.disabled = true;
+  answerFour.disabled = true;
 }
 
 function changeQuestion() {
@@ -100,18 +111,14 @@ function choosingAnswer() {
     answerOne.onclick = function () {
       this.classList.remove("btn-light");
       this.classList.add("btn-danger");
-      answerTwo.disabled = true;
-      answerThree.disabled = true;
-      answerFour.disabled = true;
+      disableAnswers();
     };
   } else {
     answerOne.onclick = function () {
       this.classList.remove("btn-light");
       this.classList.remove("btn-danger");
       this.classList.add("btn-success");
-      answerTwo.disabled = true;
-      answerThree.disabled = true;
-      answerFour.disabled = true;
+      disableAnswers();
     };
   }
 
@@ -119,18 +126,14 @@ function choosingAnswer() {
     answerTwo.onclick = function () {
       this.classList.remove("btn-light");
       this.classList.add("btn-danger");
-      answerOne.disabled = true;
-      answerThree.disabled = true;
-      answerFour.disabled = true;
+      disableAnswers();
     };
   } else {
     answerTwo.onclick = function () {
       this.classList.remove("btn-light");
       this.classList.remove("btn-danger");
       this.classList.add("btn-success");
-      answerOne.disabled = true;
-      answerThree.disabled = true;
-      answerFour.disabled = true;
+      disableAnswers();
     };
   }
 
@@ -138,18 +141,14 @@ function choosingAnswer() {
     answerThree.onclick = function () {
       this.classList.remove("btn-light");
       this.classList.add("btn-danger");
-      answerOne.disabled = true;
-      answerTwo.disabled = true;
-      answerFour.disabled = true;
+      disableAnswers();
     };
   } else {
     answerThree.onclick = function () {
       this.classList.remove("btn-light");
       this.classList.remove("btn-danger");
       this.classList.add("btn-success");
-      answerOne.disabled = true;
-      answerTwo.disabled = true;
-      answerFour.disabled = true;
+      disableAnswers();
     };
   }
 
@@ -157,18 +156,14 @@ function choosingAnswer() {
     answerFour.onclick = function () {
       this.classList.remove("btn-light");
       this.classList.add("btn-danger");
-      answerOne.disabled = true;
-      answerTwo.disabled = true;
-      answerThree.disabled = true;
+      disableAnswers();
     };
   } else {
     answerFour.onclick = function () {
       this.classList.remove("btn-light");
       this.classList.remove("btn-danger");
       this.classList.add("btn-success");
-      answerOne.disabled = true;
-      answerTwo.disabled = true;
-      answerThree.disabled = true;
+      disableAnswers();
     };
   }
 }
