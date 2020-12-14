@@ -60,8 +60,13 @@ function startQuiz() {
   nextQuestion();
 }
 
+let count = 0;
+
 function nextQuestion() {
   changeQuestion();
+  choosingAnswer();
+  count++;
+
   answerOne.classList.add("btn-light");
   answerTwo.classList.add("btn-light");
   answerThree.classList.add("btn-light");
@@ -73,8 +78,6 @@ function nextQuestion() {
   answerFour.disabled = false;
 }
 
-let count = 0;
-
 function changeQuestion() {
   if (count < quizArray.length) {
     questionText.innerText = quizArray[count].question;
@@ -82,11 +85,31 @@ function changeQuestion() {
     answerTwo.innerText = quizArray[count].answers[1].text;
     answerThree.innerText = quizArray[count].answers[2].text;
     answerFour.innerText = quizArray[count].answers[3].text;
-    count++;
   } else {
     startButton.classList.add("hide");
     showQuestions.classList.add("hide");
     nextButton.classList.add("hide");
     quizOver.classList.remove("hide");
+  }
+}
+
+function choosingAnswer() {
+  if (quizArray[count].answers[0].status !== true) {
+    answerOne.onclick = function () {
+      this.classList.remove("btn-light");
+      this.classList.add("btn-danger");
+      answerTwo.disabled = true;
+      answerThree.disabled = true;
+      answerFour.disabled = true;
+    };
+  } else {
+    answerOne.onclick = function () {
+      this.classList.remove("btn-light");
+      this.classList.remove("btn-danger");
+      this.classList.add("btn-success");
+      answerTwo.disabled = true;
+      answerThree.disabled = true;
+      answerFour.disabled = true;
+    };
   }
 }
