@@ -32,24 +32,24 @@ const quizArray = [
       { text: "Apples" },
     ],
   },
-  {
-    question: "What power do the Uchiha clan possess?",
-    answers: [
-      { text: "The Renegan" },
-      { text: "The Sharingan", status: true },
-      { text: "The Byakugan" },
-      { text: "The Nine Tails Chakra" },
-    ],
-  },
-  {
-    question: "Which tailed beast does the Raikages brother control?",
-    answers: [
-      { text: "The three tails" },
-      { text: "The nine tails" },
-      { text: "The eight tails", status: true },
-      { text: "The five tails" },
-    ],
-  },
+  // {
+  //   question: "What power do the Uchiha clan possess?",
+  //   answers: [
+  //     { text: "The Renegan" },
+  //     { text: "The Sharingan", status: true },
+  //     { text: "The Byakugan" },
+  //     { text: "The Nine Tails Chakra" },
+  //   ],
+  // },
+  // {
+  //   question: "Which tailed beast does the Raikages brother control?",
+  //   answers: [
+  //     { text: "The three tails" },
+  //     { text: "The nine tails" },
+  //     { text: "The eight tails", status: true },
+  //     { text: "The five tails" },
+  //   ],
+  // },
 ];
 
 function startQuiz() {
@@ -57,15 +57,31 @@ function startQuiz() {
   showQuestions.classList.remove("hide");
   nextButton.classList.remove("hide");
   pickRandomQuestion();
+  choosingAnswer();
 }
 
+let randomNumber = Math.floor(Math.random() * quizArray.length);
+
 function pickRandomQuestion() {
-  let randomNumber = Math.floor(Math.random() * quizArray.length);
   questionText.innerText = quizArray[randomNumber].question;
   answerOne.innerText = quizArray[randomNumber].answers[0].text;
   answerTwo.innerText = quizArray[randomNumber].answers[1].text;
   answerThree.innerText = quizArray[randomNumber].answers[2].text;
   answerFour.innerText = quizArray[randomNumber].answers[3].text;
+}
+
+function choosingAnswer() {
+  if (quizArray[randomNumber].answers[0].status !== true) {
+    answerOne.onclick = function () {
+      this.classList.remove("btn-light");
+      this.classList.add("btn-danger");
+    };
+  } else {
+    answerOne.onclick = function () {
+      this.classList.remove("btn-light");
+      this.classList.add("btn-success");
+    };
+  }
 }
 
 function nextQuestion() {
