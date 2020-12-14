@@ -62,7 +62,7 @@ function startQuiz() {
 }
 
 let count = 0;
-scoreCount = 0;
+scoreCount.innerText = 0;
 
 function nextQuestion() {
   changeQuestion();
@@ -118,6 +118,7 @@ function choosingAnswer() {
     answerOne.onclick = function () {
       answerOne.style.backgroundColor = "green";
       disableAnswers();
+      scoreCount.innerText++;
     };
   }
 
@@ -130,6 +131,7 @@ function choosingAnswer() {
     answerTwo.onclick = function () {
       answerTwo.style.backgroundColor = "green";
       disableAnswers();
+      scoreCount.innerText++;
     };
   }
 
@@ -142,6 +144,7 @@ function choosingAnswer() {
     answerThree.onclick = function () {
       answerThree.style.backgroundColor = "green";
       disableAnswers();
+      scoreCount.innerText++;
     };
   }
 
@@ -154,6 +157,7 @@ function choosingAnswer() {
     answerFour.onclick = function () {
       answerFour.style.backgroundColor = "green";
       disableAnswers();
+      scoreCount.innerText++;
     };
   }
 }
