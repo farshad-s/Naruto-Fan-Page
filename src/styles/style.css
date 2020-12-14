@@ -34,4 +34,8 @@ header,
 .main-card {
   background-image: url(https://i.pinimg.com/564x/77/a8/c0/77a8c06b4c278d029b45bc73cb6666af.jpg);
 }
+
+.list-group button:hover {
+  color: black;
+}
 /*# sourceMappingURL=style.css.map */
