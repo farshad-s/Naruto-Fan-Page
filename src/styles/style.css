@@ -26,4 +26,8 @@ header,
 .hide {
   display: none;
 }
+
+.quiz-over {
+  margin-top: revert;
+}
 /*# sourceMappingURL=style.css.map */
