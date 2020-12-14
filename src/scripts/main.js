@@ -3,6 +3,7 @@ const showQuestions = document.getElementById("quiz-container");
 const nextButton = document.getElementById("next-button");
 const questionText = document.getElementById("question-text");
 const quizOver = document.getElementById("quiz-over");
+let scoreCount = document.getElementById("score-count");
 
 const answerOne = document.getElementById("answer-one");
 const answerTwo = document.getElementById("answer-two");
@@ -61,6 +62,7 @@ function startQuiz() {
 }
 
 let count = 0;
+scoreCount = 0;
 
 function nextQuestion() {
   changeQuestion();
