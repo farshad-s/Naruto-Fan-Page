@@ -23,4 +23,4 @@ If you click next question without answering, it will be considered as skipping 
 
 If you get 3 or more questions right, you pass, else you fail!
 
-Play till the end and see if you are a real Naruto Fan
+Play till the end and see if you have what it takes to pass the academy and become a Genin!
