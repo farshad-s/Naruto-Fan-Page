@@ -3,6 +3,7 @@ const showQuestions = document.getElementById("quiz-container");
 const nextButton = document.getElementById("next-button");
 const questionText = document.getElementById("question-text");
 const quizOver = document.getElementById("quiz-over");
+const quizOverLineTwo = document.getElementById("quiz-over-line-two");
 let scoreCount = document.getElementById("score-count");
 
 const answerOne = document.getElementById("answer-one");
@@ -131,6 +132,7 @@ function changeQuestion() {
     showQuestions.classList.add("hide");
     nextButton.classList.add("hide");
     quizOver.classList.remove("hide");
+    quizOverLineTwo.classList.remove("hide");
     displayResult();
   }
 }
@@ -138,8 +140,12 @@ function changeQuestion() {
 function displayResult() {
   if (scoreCount.innerText >= 3) {
     quizOver.innerText = "Mission Complete!";
+    quizOverLineTwo.innerText = "Well done, you've passed the academy!";
+    console.log(quizOverLineTwo.innerText);
   } else {
     quizOver.innerText = "Mission Failed";
+    quizOverLineTwo.innerText = "Come back to the academy later";
+    console.log(quizOverLineTwo.innerText);
   }
 }
 
