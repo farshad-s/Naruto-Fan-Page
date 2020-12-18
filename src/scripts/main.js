@@ -97,30 +97,30 @@ function nextQuestion() {
 }
 
 // Makes the answer buttons clickable
-function enableAnswers() {
+const enableAnswers = () => {
   answerOne.disabled = false;
   answerTwo.disabled = false;
   answerThree.disabled = false;
   answerFour.disabled = false;
-}
+};
 
 // Removes option to click the answer buttons
-function disableAnswers() {
+const disableAnswers = () => {
   answerOne.disabled = true;
   answerTwo.disabled = true;
   answerThree.disabled = true;
   answerFour.disabled = true;
-}
+};
 
 // Resets button background colour to initial
-function resetButtonColour() {
+const resetButtonColour = () => {
   answerOne.style.backgroundColor = "white";
   answerTwo.style.backgroundColor = "white";
   answerThree.style.backgroundColor = "white";
   answerFour.style.backgroundColor = "white";
-}
+};
 
-function changeQuestion() {
+const changeQuestion = () => {
   if (count < quizArray.length) {
     questionText.innerText = quizArray[count].question;
     answerOne.innerText = quizArray[count].answers[0].text;
@@ -135,9 +135,9 @@ function changeQuestion() {
     quizOverLineTwo.classList.remove("hide");
     displayResult();
   }
-}
+};
 
-function displayResult() {
+const displayResult = () => {
   if (scoreCount.innerText >= 3) {
     quizOver.innerText = "Mission Complete!";
     quizOverLineTwo.innerText = "Well done, you've passed the academy!";
@@ -147,9 +147,9 @@ function displayResult() {
     quizOverLineTwo.innerText = "Come back to the academy later";
     console.log(quizOverLineTwo.innerText);
   }
-}
+};
 
-function choosingAnswer() {
+const choosingAnswer = () => {
   if (quizArray[count].answers[0].status !== true) {
     answerOne.onclick = function () {
       answerOne.style.backgroundColor = "red";
@@ -201,4 +201,4 @@ function choosingAnswer() {
       scoreCount.innerText++;
     };
   }
-}
+};
