@@ -9,10 +9,6 @@ I have also used Bootstrap for styling.
 
 I have gone with a minimal display to keep it simple
 
-### Characters
-
-In Progress
-
 ### Trivia
 
 I have created a small quiz based on Naruto.
