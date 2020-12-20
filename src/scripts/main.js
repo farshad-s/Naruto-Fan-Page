@@ -140,7 +140,7 @@ const changeQuestion = () => {
 const displayResult = () => {
   if (scoreCount.innerText >= 3) {
     quizOver.innerText = "Mission Complete!";
-    quizOverLineTwo.innerText = "Well done, you've passed the academy!";
+    quizOverLineTwo.innerText = "Well done, you passed the academy!";
     console.log(quizOverLineTwo.innerText);
   } else {
     quizOver.innerText = "Mission Failed";
