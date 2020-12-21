@@ -36,10 +36,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item active">
-                <a class="nav-link" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="trivia.html">Trivia</a>
+                <a class="nav-link" href="index.html">Trivia</a>
               </li>
             </ul>
           </div>
@@ -50,8 +47,63 @@
           <div class="row">
             <div class="col-sm-6 text-center text-sm-left mt-sm-5">
               <h1 class="header index-header">The #1 Anime and Manga!</h1>
+              <div class="card main-card hide" id="quiz-container" style="width: 18rem">
+                <div class="card-body text-sm-left">
+                  <h5 class="card-title">Question</h5>
+                  <p class="card-text" id="question-text"></p>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <button
+                    type="button"
+                    class="btn btn-light btn-outline-dark btn-block"
+                    id="answer-one"
+                  >
+                    Answer 1
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-light btn-outline-dark btn-block"
+                    id="answer-two"
+                  >
+                    Answer 2
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-light btn-outline-dark btn-block"
+                    id="answer-three"
+                  >
+                    Answer 3
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-light btn-outline-dark btn-block"
+                    id="answer-four"
+                  >
+                    Answer 4
+                  </button>
+                </div>
+                <div class="card" style="width: 18rem">
+                <button
+                type="button"
+                class="btn btn-light btn-outline-dark btn-start"
+                id="start-button"
+              >
+                Start Quiz
+              </button>
+              <button
+                type="button"
+                class="btn btn-light btn-outline-dark btn-block btn-next hide"
+                id="next-button"
+              >
+                Next Question
+              </button>
+              <p class="hide text-center quiz-over" id="quiz-over"></p>
+              <p class="hide text-center quiz-over-line-two" id="quiz-over-line-two"></p>
+                </ul>
+            </div>
             </div>
           </div>
+          <h1 class="text-primary">Score: <span class="text-primary" id="score-count">0</span></h1>
         </div>
       </main>
     </header>
