@@ -5,10 +5,6 @@ I have also used Bootstrap for styling.
 
 ## Website Pages
 
-### Home Page
-
-I have gone with a minimal display to keep it simple
-
 ### Trivia
 
 I have created a small quiz based on Naruto.
